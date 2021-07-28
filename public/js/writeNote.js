@@ -17,7 +17,7 @@ const handleNoteSubmit = () => {
   const noteTitle = document.querySelector('#noteTitle');
   const noteText = document.querySelector('#noteText');
   // 2. Format the data and write it to our database
-  firebase.database().ref(`users/${googleUser.uid}`).push({
+  firebase.database().ref(`users/${googleUser.uid}/notes`).push({
     title: noteTitle.value,
     text: noteText.value
   })
